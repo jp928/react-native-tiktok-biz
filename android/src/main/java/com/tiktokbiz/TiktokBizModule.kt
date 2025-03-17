@@ -88,6 +88,7 @@ class TiktokBizModule(reactContext: ReactApplicationContext) :
     }
     try {
       TikTokBusinessSdk.trackTTEvent(eventInfo.build())
+      TikTokBusinessSdk.flush();
       promise?.resolve(true)
     } catch (e: Exception) {
       promise?.reject("TIKTOK_TRACK_ERROR", e.message, e)

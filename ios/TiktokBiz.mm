@@ -36,6 +36,7 @@ reject:(RCTPromiseRejectBlock)reject {
       [achieveLevelEvent addPropertyWithKey:key value:properties[key]];
     }
     [TikTokBusiness trackTTEvent:achieveLevelEvent];
+    [TikTokBusiness explicitlyFlush];
     resolve(@(YES));
   } @catch (NSException *exception) {
     reject(@"tiktok_track_failed", exception.reason, nil);
