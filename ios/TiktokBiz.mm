@@ -30,7 +30,7 @@ reject:(RCTPromiseRejectBlock)reject {
            resolve:(RCTPromiseResolveBlock)resolve 
             reject:(RCTPromiseRejectBlock)reject {
   @try {
-    TikTokBaseEvent *achieveLevelEvent = [TikTokBaseEvent eventWithName:TTEventNameInAppADImpr];
+    TikTokBaseEvent *achieveLevelEvent = [TikTokBaseEvent eventWithName:eventName];
     
     for (NSString *key in properties) {
       [achieveLevelEvent addPropertyWithKey:key value:properties[key]];
