@@ -30,9 +30,9 @@ class TiktokBizModule(reactContext: ReactApplicationContext) :
             val lifecycleOwner = currentActivity as? LifecycleOwner
             lifecycleOwner?.lifecycle?.addObserver(object : DefaultLifecycleObserver {
                 override fun onResume(owner: LifecycleOwner) {
-                     val ttConfig = TikTokBusinessSdk.TTConfig(reactApplicationContext)
-                    .setAppId(appId) // Android package name or iOS listing ID, eg: com.sample.app (from Play Store) or 9876543 (from App Store)
-                    .setTTAppId(secret) // TikTok App ID from TikTok Events Manager
+                  val ttConfig = TikTokBusinessSdk.TTConfig(reactApplicationContext)
+                    .setAppId(appId)
+                    .setTTAppId(secret)
 
                   TikTokBusinessSdk.initializeSdk(
                     ttConfig

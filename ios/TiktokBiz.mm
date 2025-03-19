@@ -12,6 +12,8 @@ reject:(RCTPromiseRejectBlock)reject {
   TikTokConfig *config = [[TikTokConfig alloc] initWithAppId:appId tiktokAppId:tiktokAppId];
   
   [config setAutomaticTrackingEnabled: true];
+  [config setTrackingEnabled: true];
+  [config setInstallTrackingEnabled: true];
   
   // Initialize the SDK with completion handler
   [TikTokBusiness initializeSdk:config completionHandler:^(BOOL success, NSError * _Nullable error) {
